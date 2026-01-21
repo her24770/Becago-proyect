@@ -5,21 +5,28 @@ import pandas as pd
 
 from .models import Task, Inscripcion
 
+
 class TaskAdmin(admin.ModelAdmin):
     readonly_fields = ()
+
 
 admin.site.register(Task, TaskAdmin)
 admin.site.register(Inscripcion, TaskAdmin)
 
+
 def obtener_horas_excel(username):
     try:
+        print("llamando horasbeca")
         df = pd.read_excel('./Horas_Beca.xlsx')
-        resultado = df[df['Usuario'].str.strip().str.lower() == username.strip().lower()]
+        print(df)
+        resultado = df[df['Usuario'].str.strip().str.lower() ==
+                       username.strip().lower()]
         if not resultado.empty:
             return int(resultado['Horas Beca'].values[0])
     except Exception as e:
-        return "Error"
-    return "No registradas"
+        return 0
+    return 0
+
 
 class CustomUserAdmin(UserAdmin):
     list_display = UserAdmin.list_display + ('horas_beca',)
@@ -27,6 +34,7 @@ class CustomUserAdmin(UserAdmin):
     def horas_beca(self, obj):
         return obtener_horas_excel(obj.username)
     horas_beca.short_description = "Horas de Beca"
+
 
 admin.site.unregister(User)
 admin.site.register(User, CustomUserAdmin)

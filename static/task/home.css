@@ -1,48 +1,56 @@
-.bodyh {
-    background:linear-gradient(to bottom, #d4fccc, #ffffff, #d4fccc, #ffffff);
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+body {
+    background: linear-gradient(to bottom, #e9fdf0, #d0f2e1);
+    font-family: 'Segoe UI', sans-serif;
 }
 
-.cardh {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
+.card {
+    border-radius: 1.5rem;
+    animation: fadeIn 1s ease-in;
 }
 
-.btnh-primary, .btnh-secondary {
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: black;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-right: 10px; /* Añade espacio entre los botones */
+/* Animación */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-.btnh-primary {
-    background: skyblue; 
+.progress-container {
+    width: 160px;
+    height: 160px;
 }
 
-.btnh-primary:hover {
-    background: blue;
-    color: white;
+.progress-ring {
+    transform: rotate(-90deg);
 }
 
-.btnh-secondary {
-    background: pink;
-    margin-right: 0; /* Elimina margen adicional en el último botón */
+.progress-background {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 12;
 }
 
-.btnh-secondary:hover {
-    background: red;
-    color: white;
+.progress-circle {
+    fill: none;
+    stroke-width: 12;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.text-danger-stroke {
+    stroke: #dc3545;
+}
+
+.text-warning-stroke {
+    stroke: #ffc107;
+}
+
+.text-success-stroke {
+    stroke: #28a745;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

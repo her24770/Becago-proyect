@@ -1,0 +1,159 @@
+/* Centrar todo el contenido */
+.bodyup {
+    background: linear-gradient(to bottom, #d4fccc, #ffffff, #d4fccc, #ffffff);
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Tarjeta de perfil */
+.profile-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Imagen de perfil */
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #4caf50;
+}
+
+/* Nombre del usuario */
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Descripción */
+.profile-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Horas completadas */
+.profile-hours {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Formulario */
+.update-form {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Imagen de perfil dentro del formulario */
+.update-form .profile-image {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Contenedor de botones */
+.update-form .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaciado entre los botones */
+    margin-top: 15px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary {
+    background: #4caf50;
+}
+
+.btn-primary:hover {
+    background: #388e3c;
+}
+
+.btn-secondary {
+    background: #af4c4c;
+}
+
+.btn-secondary:hover {
+    background: #8e3838;
+}
+
+.btn-primary img {
+    width: 30px; /* Ajusta el ancho de la imagen */
+    height: 30px; /* Ajusta la altura de la imagen */
+    vertical-align: middle; /* Alinea la imagen verticalmente con el texto */
+    margin-right: 5px; /* Espaciado entre la imagen y el texto */
+}
+
+.career-select,
+.update-form select[name="university_career"] {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    display: block;
+    margin: 0 auto 10px auto;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+.update-form input[type="text"],
+.update-form input[type="email"],
+.update-form input[type="file"],
+.update-form select,
+.update-form label {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto 10px auto;
+    display: block;
+}
+
+.update-form .helptext,
+.update-form label {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 4px;
+    text-align: left;
+    width: 100%;
+}

@@ -10,7 +10,11 @@
                     <h1 class="becago">BecaGo UVG</h1>
                     <h3 class="register-title">Registrarse</h3>
                     
-                    {{error}}
+                    {% if error %}
+                        <div class="alert alert-danger">
+                            {{ error }}
+                        </div>
+                    {% endif %}
                     
                     {% csrf_token %}
                     
@@ -18,21 +22,21 @@
                         <label for="username" class="form-label">Nombre de usuario</label>
                         <input type="text" name="username" id="username" 
                                class="form-control form-input" 
-                               placeholder="Crea tu nombre de usuario">
+                               placeholder="Crea tu nombre de usuario" required>
                     </div>
                     
                     <div class="mb-4">
                         <label for="password1" class="form-label">Contraseña</label>
                         <input type="password" name="password1" id="password1" 
                                class="form-control form-input" 
-                               placeholder="Crea tu contraseña">
+                               placeholder="Crea tu contraseña" required>
                     </div>
                     
                     <div class="mb-4">
                         <label for="password2" class="form-label">Confirmar contraseña</label>
                         <input type="password" name="password2" id="password2" 
                                class="form-control form-input" 
-                               placeholder="Confirma tu contraseña">
+                               placeholder="Confirma tu contraseña" required>
                     </div>
                     
                     <button class="btn btn-primary register-btn">
