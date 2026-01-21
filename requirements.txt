@@ -4,26 +4,18 @@ pandas>=2.0.0
 openpyxl>=3.1.0
 gunicorn>=21.0.0
 whitenoise>=6.6.0
-```
 
----
+
 
 ## 2. `Procfile` (crear en raíz del proyecto)
-```
 web: gunicorn djangocrud.wsgi --log-file -
-```
 
----
 
 ## 3. `runtime.txt` (crear en raíz del proyecto)
-```
 python-3.11.9
-```
 
----
 
 ## 4. `.gitignore` (crear en raíz del proyecto, si no existe)
-```
 # Python
 *.pyc
 __pycache__/
