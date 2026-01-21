@@ -1,0 +1,70 @@
+Django==5.1.7
+Pillow>=10.0.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+gunicorn>=21.0.0
+whitenoise>=6.6.0
+```
+
+---
+
+## 2. `Procfile` (crear en raíz del proyecto)
+```
+web: gunicorn djangocrud.wsgi --log-file -
+```
+
+---
+
+## 3. `runtime.txt` (crear en raíz del proyecto)
+```
+python-3.11.9
+```
+
+---
+
+## 4. `.gitignore` (crear en raíz del proyecto, si no existe)
+```
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
+*.log
+db.sqlite3
+*.sqlite3
+/staticfiles/
+/static/
+/media/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
