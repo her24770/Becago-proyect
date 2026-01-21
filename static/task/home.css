@@ -1,0 +1,48 @@
+.bodyh {
+    background:linear-gradient(to bottom, #d4fccc, #ffffff, #d4fccc, #ffffff);
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.cardh {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.btnh-primary, .btnh-secondary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-right: 10px; /* Añade espacio entre los botones */
+}
+
+.btnh-primary {
+    background: skyblue; 
+}
+
+.btnh-primary:hover {
+    background: blue;
+    color: white;
+}
+
+.btnh-secondary {
+    background: pink;
+    margin-right: 0; /* Elimina margen adicional en el último botón */
+}
+
+.btnh-secondary:hover {
+    background: red;
+    color: white;
+}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel = "stylesheet" href="{% static 'task/resumen.css' %}">
+<div class="bodyr">
+  <h2 class="mb-4 text-center">Resumen de Actividades Completadas</h2>
+  
+  <div class="tabler">
+    <table class="table">
+        <tr>
+          <th>Actividad</th>
+          <th>Fecha Realizada</th>
+          <th>Horas dadas</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for completado in completados %}
+          <tr>
+            <td>{{ completado.task.title }}</td>
+            <td>{{ completado.task.date_time|date:"d/m/Y"}}</td>
+            <td>{{ completado.task.hours }}</td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td colspan="3" class="text-muted">No has completado ninguna actividad aún.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+    <h2>Resumen</h2>
+    <p><strong>Horas Requeridas: {{ horas_beca }}</strong></p>    
+    <br>
+    <p><strong>Horas Completadas: {{ horas_completadas }}</strong></p>  
+    <br>
+    <p><strong>Horas Pendientes: {{ horas_pendientes }}</strong></p>  
+</div>
+{% endblock %}
+
+*/table-responsive

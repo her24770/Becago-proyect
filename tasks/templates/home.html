@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'task/home.css' %}">
+<div class="bodyh">
+    <main>
+        <section class="cardh">
+            <h1 class="">Bienvenido Becadiño!!!</h1>
+            <p>¡Bienvenido a nuestra plataforma! Aquí podrás gestionar tus actividades y 
+                recursos como becado universitario de manera sencilla y eficiente. 
+                Estamos aquí para apoyarte en tu camino académico. ¡Comencemos!</p>
+
+            {% if not user.is_authenticated %}
+                <div>
+                    <a href="/signin/" class="btnh-primary">
+                        Signin
+                    </a>
+                    <a href="/signup/" class="btnh-secondary">
+                        Signup
+                    </a>
+                </div>
+            {% else %}
+                <div>
+                    <a href="/tasks/" class="btnh-primary">
+                        Ir a Actividades
+                    </a>
+                </div>
+            {% endif %}
+        </section>
+    </main>
+</div>
+{% endblock %}

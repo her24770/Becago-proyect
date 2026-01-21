@@ -1,0 +1,14 @@
+.bodyt {
+    background:linear-gradient(to bottom, #d4fccc, #ffffff, #d4fccc, #ffffff);
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardt {
+    padding: 20px;
+    max-width: 1200px;
+}

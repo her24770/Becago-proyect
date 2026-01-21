@@ -1,0 +1,54 @@
+.login-bg {
+    background-color: #e8f5e9; /* Verde claro pastel (como en la foto) */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.login-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    background-color: #90c897;
+}
+.becago {
+    color: #0d522c; 
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.login-title {
+    color: black; 
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.form-input {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 1.5rem;
+    background-color: #f8f9fa;
+}
+.form-input:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+    background-color: white;
+}
+.login-btn {
+    background-color: #2e7d32;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    width: 100%;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+.login-btn:hover {
+    background-color: #1b5e20;
+}
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #424242;
+}

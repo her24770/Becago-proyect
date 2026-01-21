@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel = "stylesheet" href="{% static 'task/tasks_inscritas.css' %}">
+<div class="bodyti">
+    <h1 class="mb-4">Mis actividades inscritas</h1>
+    <div class="row">
+        {% for inscripcion in inscripciones %}
+            <div class="cardsti">
+                <div>
+                    <div>
+                        <h5>{{ inscripcion.task.title }}</h5>
+                        <p><strong>Fecha:</strong> {{ inscripcion.task.date_time }}</p>
+                        <p><strong>Ubicación:</strong> {{ inscripcion.task.location }}</p>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>No estás inscrito a ninguna actividad.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

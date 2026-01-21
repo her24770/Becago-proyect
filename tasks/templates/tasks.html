@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel = "stylesheet" href="{% static 'task/tasks.css' %}">
+<div class = "bodyt">
+    <main class = "cardt">
+        <h1 class="text-center display-4 mb-5">Actividades</h1>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for task in tasks %}
+            <div class="col">
+                <a href="{% url 'task_detail' task.id %}" class="text-decoration-none text-dark">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column justify-content-between">
+
+                            
+                            <div class="mb-3">
+                                <h5 class="card-title fw-bold text-success">📌 {{ task.title }}</h5>
+                                <p class="card-subtitle text-muted">Fecha: {{ task.date_time|date:"d M Y - H:i" }}</p>
+                            </div>
+
+                            
+                            {% if task.image %}
+                            <img src="{{ task.image.url }}" alt="{{ task.title }}" class="img-fluid rounded" style="height: 200px; object-fit: cover;">
+                            {% else %}
+                            <img src="https://via.placeholder.com/400x250?text=Sin+imagen" alt="Sin imagen" class="img-fluid rounded" style="height: 200px; object-fit: cover;">
+                            {% endif %}
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+</div>
+{% endblock %}

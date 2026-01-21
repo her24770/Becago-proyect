@@ -1,0 +1,22 @@
+.bodyti {
+    background:linear-gradient(to bottom, #d4fccc, #ffffff, #d4fccc, #ffffff);
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cardsti {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    display: inline-block;
+}
