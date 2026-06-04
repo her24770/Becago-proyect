@@ -1,0 +1,17 @@
+services:
+  web:
+    build: .
+    ports:
+      - "127.0.0.1:3102:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./media:/app/media
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./Horas_Beca.xlsx:/app/Horas_Beca.xlsx
+    restart: unless-stopped
+    networks:
+      - becago_net
+
+networks:
+  becago_net:
